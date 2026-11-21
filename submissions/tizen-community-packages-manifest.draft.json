@@ -5,7 +5,7 @@
   "repo": "shuqair99/EaglePro-TV-Releases",
   "source": "release",
   "branch": "main",
-  "output_name": "EAGLE_PRO_TV.wgt",
+  "output_name": "EAGLE_PRO_TV_UNSIGNED.wgt",
   "flags": [
     "closed-source"
   ]
