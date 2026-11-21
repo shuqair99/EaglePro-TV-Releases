@@ -1,39 +1,45 @@
 # EAGLE PRO — Samsung Tizen TV
 
-This repository is the release/staging repository for the Samsung Tizen TV port of EAGLE PRO.
+Official release channel for the Samsung Tizen TV edition of EAGLE PRO.
 
-## Scope
+- **App name:** EAGLE PRO
+- **Platform:** Samsung Tizen Smart TV
+- **Package format:** WGT
+- **Release feed:** https://api.github.com/repos/shuqair99/EaglePro-TV-Releases/releases
+- **Original project:** maintained separately in the private `Eagle_Pro` repository.
 
-- Samsung Tizen TV WGT packages only.
-- The original Android and Windows projects remain in the separate `Eagle_Pro` repository.
-- TV-only changes: remove radio recording and the promotional video.
-- Preserve the radio station list, favourites, and the real audio visualizer where the target TV runtime supports the required audio APIs.
-- TV remote navigation must be tested on actual hardware before a build is described as production-ready.
+## Scope of this repository
 
-## Build status
+This repository is for TV builds and release metadata only. It must not contain the original Android/Windows project, credentials, subscription lists, private server URLs, or customer data.
 
-The source repository currently produces an **unsigned WGT packaging artifact** through GitHub Actions. It is a build-validation artifact, not yet a signed, install-ready release.
+The TV edition must omit:
+- Radio recording and all recording controls/engines.
+- The promotional video added in the latest update and its player/launcher code.
 
-The current package validation checks:
-- Tizen `config.xml` parses as XML.
-- Core web pages are present.
-- Recording and promotional-video assets are absent from the TV package.
-- The WGT archive passes ZIP integrity testing.
+The TV edition must retain:
+- Radio station browsing and playback.
+- Favourites.
+- A real audio visualizer driven by actual playback audio data (never simulated bars).
+- TV remote navigation.
 
-## Important compatibility notes
+## Build and validation status
 
-- Tizen generations differ substantially. A package declaring an older minimum version does not prove compatibility with every TV model.
-- Playback must be validated against Samsung AVPlay and supported codecs/protocols.
-- A browser-based audio visualizer must be connected to real audio samples; no simulated animation is acceptable.
-- Apps2Samsung's catalog reads release metadata from its own upstream `third-party-apps.json`. Listing EAGLE PRO there requires an upstream catalog contribution/acceptance; merely creating this repository does not add it to the catalog.
-- Apps2Samsung currently consumes public GitHub release endpoints in its catalog. This private staging repository will not be discoverable by that public catalog until a public distribution path is chosen.
+The current build pipeline in the private source repository has produced an **unsigned WGT packaging artifact** and validated its ZIP integrity and XML manifest. This is not yet a signed, hardware-tested production release.
 
-## Release policy
+Before publishing a stable release, verify:
+1. The WGT installs through the intended Apps2Samsung installation flow.
+2. Remote navigation works on physical Samsung TVs.
+3. Radio streams play through the supported Samsung TV playback path.
+4. The visualizer reacts to actual audio samples.
+5. Recording and promotional-video functionality are absent.
+6. Compatibility is tested separately across supported Tizen generations.
 
-Do not publish an artifact as a stable release until it is:
-1. Built from the audited source.
-2. Signed using a supported Samsung/Tizen installation path.
-3. Tested for installation and remote navigation.
-4. Tested for actual radio/audio playback on target TVs.
-5. Checked for absence of recording and promotional-video functionality.
+## Apps2Samsung catalog
 
+Apps2Samsung reads third-party providers from its upstream `third-party-apps.json` file. This repository's Releases API is the intended provider endpoint, but EAGLE PRO will not appear in the Apps2Samsung catalog until its maintainers accept a catalog contribution.
+
+Provider metadata proposal: [apps2samsung-provider.json](./apps2samsung-provider.json).
+
+## Releases
+
+Stable WGT files will be attached to GitHub Releases in this repository only after signing/install-path validation and real-device testing.
