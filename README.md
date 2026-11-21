@@ -40,6 +40,13 @@ Apps2Samsung reads third-party providers from its upstream `third-party-apps.jso
 
 Provider metadata proposal: [apps2samsung-provider.json](./apps2samsung-provider.json).
 
+
+## Redistribution permission for Apps2Samsung
+
+I, the owner and author of EAGLE PRO and the `shuqair99/EaglePro-TV-Releases` repository, explicitly grant the Apps2Samsung / Tizen Community Packages maintainers permission to redistribute the prebuilt EAGLE PRO Samsung Tizen TV `.wgt` release asset through their community bundle, subject to the repository's review and the conditions stated here. This permission applies only to the TV WGT release asset in this repository; it does not grant access to or redistribution of the private Android/Windows source repository `shuqair99/Eagle_Pro`.
+
+The TV package must not contain bundled playlists, preset IPTV content sources, credentials, private subscription data, or third-party server credentials. The user must supply any streaming source they are authorized to use. Do not redistribute unsigned test builds as stable releases.
+
 ## Releases
 
 Stable WGT files will be attached to GitHub Releases in this repository only after signing/install-path validation and real-device testing.
