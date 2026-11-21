@@ -1,0 +1,12 @@
+{
+  "name": "EAGLE PRO",
+  "description": "IPTV and live TV player for Samsung Tizen TVs; users add their own authorized streaming sources.",
+  "category": "iptv",
+  "repo": "shuqair99/EaglePro-TV-Releases",
+  "source": "release",
+  "branch": "main",
+  "output_name": "EAGLE_PRO_TV.wgt",
+  "flags": [
+    "closed-source"
+  ]
+}
