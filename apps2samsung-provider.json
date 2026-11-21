@@ -1,0 +1,12 @@
+{
+  "id": "eagle-pro-tizen",
+  "category": "media",
+  "url": "https://api.github.com/repos/shuqair99/EaglePro-TV-Releases/releases",
+  "prefix": "",
+  "displayName": "EAGLE PRO",
+  "take": 1,
+  "buildInfo": {
+    "name": "EAGLE PRO",
+    "description": "EAGLE PRO radio and entertainment for Samsung Smart TVs. TV edition without recording or promotional video."
+  }
+}
